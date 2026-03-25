@@ -65,10 +65,6 @@ Discord/Slack 채널별로 다른 에이전트 + 시스템 프롬프트.
 
 → [상세 가이드](docs/memory-flush-guide.md)
 
-## 🔗 관련 레포
-
-- **[claude-cookbook](https://github.com/ianstream/claude-cookbook)** — Claude API 최적화 (cacheRetention, thinking, fastMode)
-
 ## 🚀 빠른 시작
 
 ### 1. 예제 설정 복사

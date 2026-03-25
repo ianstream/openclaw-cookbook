@@ -65,10 +65,6 @@ Auto-save important content before compaction.
 
 → [Detailed Guide](docs/memory-flush-guide.md)
 
-## 🔗 Related
-
-- **[claude-cookbook](https://github.com/ianstream/claude-cookbook)** — Claude API optimization (cacheRetention, thinking, fastMode)
-
 ## 🚀 Quick Start
 
 ### 1. Copy example config
