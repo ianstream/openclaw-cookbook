@@ -156,6 +156,17 @@ openclaw gateway restart
 
 - [OpenClaw 공식 문서](https://docs.openclaw.ai)
 - [OpenClaw GitHub](https://github.com/openclaw/openclaw)
+- [OpenClaw Discord](https://discord.com/invite/clawd)
+
+## 🌐 커뮤니티
+
+유용했다면 공유해주세요!
+
+- **OpenClaw Discord** — 피드백과 토론하기 좋은 곳
+- **Twitter/X** — #OpenClaw 태그
+- **Reddit** — r/LocalLLaMA, r/ChatGPTCoding
+- **Hacker News** — Show HN
+- **GeekNews** — 한국 개발자 커뮤니티
 
 ## 🤝 기여
 
