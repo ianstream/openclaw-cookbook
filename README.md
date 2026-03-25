@@ -15,11 +15,14 @@ openclaw-cookbook/
 ├── docs/
 │   ├── token-optimization.md    # Token optimization (EN)
 │   ├── token-optimization.ko.md # 토큰 최적화 (KO)
+│   ├── claude-optimization.md   # Claude model optimization (EN)
+│   ├── claude-optimization.ko.md # Claude 모델 최적화 (KO)
 │   ├── multi-agent-guide.md     # Multi-agent setup
 │   ├── channel-binding-guide.md # Channel binding
 │   └── memory-flush-guide.md    # Memory flush
 └── examples/
     ├── token-optimization/      # Context pruning & compaction
+    ├── claude-optimization/     # Claude model settings
     ├── multi-agent/             # Agent definitions
     ├── channel-binding/         # Channel-specific bindings
     ├── memory-flush/            # Pre-compaction memory save
@@ -37,7 +40,18 @@ Reduce costs and manage context window efficiently.
 
 → [Detailed Guide](docs/token-optimization.md)
 
-### 2. Multi-Agent
+### 2. Claude Model Optimization
+
+Tune Claude-specific settings for performance and cost.
+
+- **Prompt Caching**: `cacheRetention` (short/long)
+- **Adaptive Thinking**: `thinking` (off/low/medium/high/adaptive)
+- **Priority Tier**: `fastMode` (API Key only)
+- **Model Fallbacks**: Auto-failover when primary fails
+
+→ [Detailed Guide](docs/claude-optimization.md)
+
+### 3. Multi-Agent
 
 Run different agents with different models/settings per use case.
 
@@ -47,7 +61,7 @@ Run different agents with different models/settings per use case.
 
 → [Detailed Guide](docs/multi-agent-guide.md)
 
-### 3. Channel Binding
+### 4. Channel Binding
 
 Different agents + system prompts per Discord/Slack channel.
 
@@ -56,7 +70,7 @@ Different agents + system prompts per Discord/Slack channel.
 
 → [Detailed Guide](docs/channel-binding-guide.md)
 
-### 4. Memory Flush
+### 5. Memory Flush
 
 Auto-save important content before compaction.
 

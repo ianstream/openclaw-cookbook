@@ -15,11 +15,14 @@ openclaw-cookbook/
 ├── docs/
 │   ├── token-optimization.md    # Token optimization (EN)
 │   ├── token-optimization.ko.md # 토큰 최적화 (KO)
+│   ├── claude-optimization.md   # Claude model optimization (EN)
+│   ├── claude-optimization.ko.md # Claude 모델 최적화 (KO)
 │   ├── multi-agent-guide.md     # 다중 에이전트 설정
 │   ├── channel-binding-guide.md # 채널 바인딩
 │   └── memory-flush-guide.md    # 메모리 플러시
 └── examples/
     ├── token-optimization/      # 컨텍스트 프루닝 & 컴팩션
+    ├── claude-optimization/     # Claude 모델 설정
     ├── multi-agent/             # 에이전트 정의
     ├── channel-binding/         # 채널별 바인딩
     ├── memory-flush/            # 컴팩션 전 메모리 저장
@@ -37,7 +40,18 @@ openclaw-cookbook/
 
 → [상세 가이드](docs/token-optimization.ko.md)
 
-### 2. 다중 에이전트
+### 2. Claude 모델 최적화
+
+Claude 전용 설정으로 성능과 비용 최적화.
+
+- **프롬프트 캐싱**: `cacheRetention` (short/long)
+- **Adaptive Thinking**: `thinking` (off/low/medium/high/adaptive)
+- **Priority Tier**: `fastMode` (API Key 전용)
+- **모델 Fallback**: 기본 모델 실패 시 자동 대체
+
+→ [상세 가이드](docs/claude-optimization.ko.md)
+
+### 3. 다중 에이전트
 
 용도별로 다른 모델/설정을 가진 에이전트 운영.
 
@@ -47,7 +61,7 @@ openclaw-cookbook/
 
 → [상세 가이드](docs/multi-agent-guide.md)
 
-### 3. 채널 바인딩
+### 4. 채널 바인딩
 
 Discord/Slack 채널별로 다른 에이전트와 시스템 프롬프트.
 
@@ -56,7 +70,7 @@ Discord/Slack 채널별로 다른 에이전트와 시스템 프롬프트.
 
 → [상세 가이드](docs/channel-binding-guide.md)
 
-### 4. 메모리 플러시
+### 5. 메모리 플러시
 
 컴팩션 전 중요 내용 자동 저장.
 
