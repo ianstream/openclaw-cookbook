@@ -6,6 +6,27 @@
 
 ---
 
+## What is this?
+
+A collection of **real-world configuration patterns** for [OpenClaw](https://github.com/openclaw/openclaw) — the open-source AI assistant framework.
+
+**Who is this for?**
+- OpenClaw users who want to go beyond basic setup
+- Developers looking for production-ready configurations
+- Anyone tired of reading docs and wanting copy-paste examples
+
+**What's included?**
+- 11 detailed guides with working examples
+- Security hardening configurations
+- Multi-agent orchestration patterns
+- Cost optimization strategies
+- Full English/Korean documentation
+
+**Why this exists:**
+OpenClaw docs are comprehensive but scattered. This cookbook distills months of production usage into patterns you can use immediately.
+
+---
+
 ## 📁 Repository Structure
 
 ```
