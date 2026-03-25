@@ -1,0 +1,32 @@
+{
+  "agents": {
+    "defaults": {
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "5m",
+        "keepLastAssistants": 2,
+        "softTrimRatio": 0.2,
+        "hardClearRatio": 0.4,
+        "minPrunableToolChars": 20000,
+        "softTrim": {
+          "maxChars": 2000,
+          "headChars": 800,
+          "tailChars": 800
+        },
+        "hardClear": {
+          "enabled": true,
+          "placeholder": "[Cleared]"
+        },
+        "tools": {
+          "allow": ["exec", "read", "web_fetch", "web_search"],
+          "deny": ["*image*", "*screenshot*"]
+        }
+      },
+      "compaction": {
+        "mode": "default",
+        "reserveTokensFloor": 20000,
+        "model": "anthropic/claude-haiku-3-5"
+      }
+    }
+  }
+}

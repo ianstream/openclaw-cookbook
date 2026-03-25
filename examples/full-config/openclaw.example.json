@@ -1,0 +1,141 @@
+{
+  "env": {
+    "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY"
+  },
+  "logging": {
+    "level": "info",
+    "file": "~/.openclaw/logs/openclaw.log",
+    "redactSensitive": "tools"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-6",
+        "fallbacks": ["google/gemini-2.5-flash"]
+      },
+      "workspace": "~/.openclaw/workspace",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "6h",
+        "keepLastAssistants": 3
+      },
+      "compaction": {
+        "mode": "default",
+        "reserveTokensFloor": 50000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 4000,
+          "prompt": "Review the session for any architectural decisions, bug fixes, or new patterns. Write notes to memory/YYYY-MM-DD.md. Reply NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
+      },
+      "heartbeat": {
+        "every": "1h"
+      },
+      "maxConcurrent": 10,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "code",
+        "name": "Code Agent",
+        "model": "anthropic/claude-opus-4-5"
+      },
+      {
+        "id": "analyst",
+        "name": "Analyst Agent",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      {
+        "id": "lite",
+        "name": "Lite Agent",
+        "model": "anthropic/claude-sonnet-4-6"
+      },
+      {
+        "id": "main",
+        "name": "Main Agent",
+        "default": true,
+        "model": "anthropic/claude-opus-4-5"
+      }
+    ]
+  },
+  "tools": {
+    "media": {
+      "audio": {
+        "enabled": true,
+        "echoTranscript": true,
+        "echoFormat": "📝 \"{transcript}\""
+      }
+    },
+    "agentToAgent": {
+      "enabled": true
+    },
+    "exec": {
+      "security": "full"
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "code",
+      "match": {
+        "channel": "discord",
+        "peer": { "kind": "channel", "id": "TECH_CHANNEL_ID" }
+      }
+    },
+    {
+      "agentId": "analyst",
+      "match": {
+        "channel": "discord",
+        "peer": { "kind": "channel", "id": "QUANT_CHANNEL_ID" }
+      }
+    },
+    {
+      "agentId": "main",
+      "match": { "channel": "discord" }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions",
+    "tts": {
+      "auto": "always",
+      "provider": "edge",
+      "edge": {
+        "enabled": true,
+        "voice": "ko-KR-SunHiNeural",
+        "lang": "ko-KR"
+      }
+    }
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "token": "YOUR_DISCORD_BOT_TOKEN",
+      "groupPolicy": "allowlist",
+      "dmPolicy": "pairing",
+      "allowFrom": ["YOUR_DISCORD_USER_ID"],
+      "guilds": {
+        "YOUR_GUILD_ID": {
+          "requireMention": false,
+          "channels": {
+            "TECH_CHANNEL_ID": {
+              "allow": true,
+              "systemPrompt": "🧙 시니어 소프트웨어 엔지니어 페르소나"
+            },
+            "QUANT_CHANNEL_ID": {
+              "allow": true,
+              "systemPrompt": "📊 퀀트 투자 전문가 페르소나"
+            },
+            "*": { "allow": true }
+          }
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 28981,
+    "mode": "local",
+    "bind": "loopback"
+  }
+}

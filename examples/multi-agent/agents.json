@@ -1,0 +1,42 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-6",
+        "fallbacks": ["google/gemini-2.5-flash"]
+      },
+      "workspace": "/path/to/workspace",
+      "maxConcurrent": 10,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "code",
+        "name": "Code Agent",
+        "model": "anthropic/claude-opus-4-5",
+        "workspace": "/path/to/workspace"
+      },
+      {
+        "id": "analyst",
+        "name": "Analyst Agent",
+        "model": "anthropic/claude-sonnet-4-5",
+        "workspace": "/path/to/workspace"
+      },
+      {
+        "id": "lite",
+        "name": "Lite Agent",
+        "model": "anthropic/claude-sonnet-4-6",
+        "workspace": "/path/to/workspace"
+      },
+      {
+        "id": "main",
+        "name": "Main Agent",
+        "default": true,
+        "model": "anthropic/claude-opus-4-5",
+        "workspace": "/path/to/workspace"
+      }
+    ]
+  }
+}

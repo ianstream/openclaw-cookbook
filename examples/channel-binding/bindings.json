@@ -1,0 +1,70 @@
+{
+  "bindings": [
+    {
+      "agentId": "code",
+      "match": {
+        "channel": "discord",
+        "peer": {
+          "kind": "channel",
+          "id": "TECH_CHANNEL_ID"
+        }
+      }
+    },
+    {
+      "agentId": "analyst",
+      "match": {
+        "channel": "discord",
+        "peer": {
+          "kind": "channel",
+          "id": "QUANT_CHANNEL_ID"
+        }
+      }
+    },
+    {
+      "agentId": "lite",
+      "match": {
+        "channel": "discord",
+        "peer": {
+          "kind": "channel",
+          "id": "CASUAL_CHANNEL_ID"
+        }
+      }
+    },
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "discord"
+      }
+    }
+  ],
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "groupPolicy": "allowlist",
+      "dmPolicy": "pairing",
+      "allowFrom": ["YOUR_DISCORD_USER_ID"],
+      "guilds": {
+        "YOUR_GUILD_ID": {
+          "requireMention": false,
+          "channels": {
+            "TECH_CHANNEL_ID": {
+              "allow": true,
+              "systemPrompt": "🧙 20년차 시니어 소프트웨어 엔지니어.\n\n## 핵심 역량\n- 풀스택 개발, 아키텍처 설계\n- 트러블슈팅, 성능 최적화\n- 코드 리뷰, 베스트 프랙티스"
+            },
+            "QUANT_CHANNEL_ID": {
+              "allow": true,
+              "systemPrompt": "📊 월스트리트 퀀트 투자 전문가.\n\n## 핵심 역량\n- 데이터 기반 투자 분석\n- 백테스팅, 리스크 관리\n- 포트폴리오 최적화"
+            },
+            "CASUAL_CHANNEL_ID": {
+              "allow": true,
+              "systemPrompt": "💬 편한 대화 파트너.\n\n## 스타일\n- 가볍고 친근하게\n- 공감 우선\n- 이모지 적극 활용"
+            },
+            "*": {
+              "allow": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "agents": {
+    "defaults": {
+      "compaction": {
+        "mode": "default",
+        "reserveTokensFloor": 50000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 4000,
+          "prompt": "Review the session for any architectural decisions, bug fixes, or new patterns. Write notes to memory/YYYY-MM-DD.md. Reply NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
+      }
+    }
+  }
+}
