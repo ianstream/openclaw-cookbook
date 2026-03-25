@@ -25,6 +25,20 @@ openclaw-cookbook/
     └── ...
 ```
 
+## 🚀 설치
+
+**[📖 Installation Guide](docs/installation.md)** | **[📖 설치 가이드](docs/installation.ko.md)**
+
+```bash
+# 빠른 설치
+npm install -g openclaw
+openclaw setup
+openclaw auth login anthropic
+openclaw gateway start
+```
+
+---
+
 ## 🎯 설정 패턴
 
 ### 1. 토큰 최적화
@@ -108,7 +122,7 @@ openclaw-cookbook/
 
 → [상세 가이드](docs/exec-security-guide.ko.md)
 
-## 🚀 빠른 시작
+## 🚀 빠른 시작 (설치 후)
 
 ### 1. 예제 설정 복사
 
