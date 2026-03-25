@@ -20,7 +20,8 @@ openclaw-cookbook/
 │   ├── heartbeat-guide.ko.md     # 주기적 체크인
 │   ├── cron-guide.ko.md          # 예약 작업
 │   ├── subagent-guide.ko.md      # 병렬 백그라운드
-│   └── exec-security-guide.ko.md # 샌드박싱 & 권한
+│   ├── exec-security-guide.ko.md # 샌드박싱 & 권한
+│   └── security-guide.ko.md      # 전체 보안 강화
 └── examples/
     └── ...
 ```
@@ -121,6 +122,17 @@ openclaw gateway start
 - **Docker Sandbox**: 격리된 실행
 
 → [상세 가이드](docs/exec-security-guide.ko.md)
+
+### 10. 보안 강화
+
+무단 접근으로부터 배포 보호.
+
+- **게이트웨이 인증**: 토큰/비밀번호 인증
+- **네트워크 바인딩**: Loopback vs LAN vs Tailnet
+- **DM/그룹 정책**: 페어링, 허용 목록
+- **민감한 파일**: 권한, 시크릿 관리
+
+→ [상세 가이드](docs/security-guide.ko.md)
 
 ## 🚀 빠른 시작 (설치 후)
 

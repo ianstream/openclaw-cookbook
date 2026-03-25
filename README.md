@@ -20,7 +20,8 @@ openclaw-cookbook/
 │   ├── heartbeat-guide.md        # Periodic check-ins
 │   ├── cron-guide.md             # Scheduled tasks
 │   ├── subagent-guide.md         # Parallel background tasks
-│   └── exec-security-guide.md    # Sandboxing & permissions
+│   ├── exec-security-guide.md    # Sandboxing & permissions
+│   └── security-guide.md         # Full security hardening
 └── examples/
     └── ...
 ```
@@ -121,6 +122,17 @@ Control command execution and sandboxing.
 - **Docker Sandbox**: Isolated execution
 
 → [Detailed Guide](docs/exec-security-guide.md)
+
+### 10. Security Hardening
+
+Protect your deployment from unauthorized access.
+
+- **Gateway Auth**: Token/password authentication
+- **Network Binding**: Loopback vs LAN vs Tailnet
+- **DM/Group Policies**: Pairing, allowlists
+- **Sensitive Files**: Permissions, secrets management
+
+→ [Detailed Guide](docs/security-guide.md)
 
 ## 🚀 Quick Start (After Installation)
 
