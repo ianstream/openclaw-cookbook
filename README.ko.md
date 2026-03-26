@@ -16,7 +16,7 @@
 - 문서 읽기 지치고 복붙 예제가 필요한 사람
 
 **뭐가 있나요?**
-- 동작하는 예제와 함께 11개의 상세 가이드
+- 동작하는 예제와 함께 12개의 상세 가이드
 - 보안 강화 설정
 - 다중 에이전트 오케스트레이션 패턴
 - 비용 최적화 전략
@@ -42,7 +42,8 @@ openclaw-cookbook/
 │   ├── cron-guide.ko.md          # 예약 작업
 │   ├── subagent-guide.ko.md      # 병렬 백그라운드
 │   ├── exec-security-guide.ko.md # 샌드박싱 & 권한
-│   └── security-guide.ko.md      # 전체 보안 강화
+│   ├── security-guide.ko.md      # 전체 보안 강화
+│   └── auto-mode.ko.md           # Claude Code Auto Mode
 └── examples/
     └── ...
 ```
@@ -154,6 +155,16 @@ openclaw gateway start
 - **민감한 파일**: 권한, 시크릿 관리
 
 → [상세 가이드](docs/security-guide.ko.md)
+
+### 11. Claude Code Auto Mode
+
+모델 기반 분류기로 권한 프롬프트를 안전하게 건너뛰기.
+
+- **2중 방어**: 입력 탐지 + 출력 분류기
+- **3단계 권한**: 안전 자동 허용, 프로젝트 편집, 분류 작업
+- **실제 위협 방어**: 과잉 행동, 자격증명 탐색, 데이터 유출
+
+→ [상세 가이드](docs/auto-mode.ko.md)
 
 ## 🚀 빠른 시작 (설치 후)
 

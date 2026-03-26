@@ -16,7 +16,7 @@ A collection of **real-world configuration patterns** for [OpenClaw](https://git
 - Anyone tired of reading docs and wanting copy-paste examples
 
 **What's included?**
-- 11 detailed guides with working examples
+- 12 detailed guides with working examples
 - Security hardening configurations
 - Multi-agent orchestration patterns
 - Cost optimization strategies
@@ -42,7 +42,8 @@ openclaw-cookbook/
 │   ├── cron-guide.md             # Scheduled tasks
 │   ├── subagent-guide.md         # Parallel background tasks
 │   ├── exec-security-guide.md    # Sandboxing & permissions
-│   └── security-guide.md         # Full security hardening
+│   ├── security-guide.md         # Full security hardening
+│   └── auto-mode.md              # Claude Code Auto Mode
 └── examples/
     └── ...
 ```
@@ -154,6 +155,16 @@ Protect your deployment from unauthorized access.
 - **Sensitive Files**: Permissions, secrets management
 
 → [Detailed Guide](docs/security-guide.md)
+
+### 11. Claude Code Auto Mode
+
+Skip permission prompts safely with model-based classifiers.
+
+- **Two-Layer Defense**: Input probe + Output classifier
+- **Three-Tier Permissions**: Safe auto-allow, project edits, classified actions
+- **Real Threat Protection**: Overeager behavior, credential exploration, data exfiltration
+
+→ [Detailed Guide](docs/auto-mode.md)
 
 ## 🚀 Quick Start (After Installation)
 
