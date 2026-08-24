@@ -33,7 +33,7 @@
       {
         "id": "code",
         "name": "Code Agent",
-        "model": "anthropic/claude-opus-4-6"
+        "model": "anthropic/claude-opus-4-8"
       },
       {
         "id": "analyst",
@@ -74,7 +74,7 @@
     "list": [
       {
         "id": "code",
-        "model": "anthropic/claude-opus-4-6",
+        "model": "anthropic/claude-opus-4-8",
         "compaction": {
           "reserveTokensFloor": 80000
         },

@@ -32,12 +32,12 @@ OpenClaw에서 여러 에이전트를 정의하고, 각각 다른 모델과 설�
       {
         "id": "code",
         "name": "Code Agent",
-        "model": "anthropic/claude-opus-4-5"
+        "model": "anthropic/claude-opus-4-8"
       },
       {
         "id": "analyst",
         "name": "Analyst Agent",
-        "model": "anthropic/claude-sonnet-4-5"
+        "model": "anthropic/claude-sonnet-4-6"
       },
       {
         "id": "lite",
@@ -48,7 +48,7 @@ OpenClaw에서 여러 에이전트를 정의하고, 각각 다른 모델과 설�
         "id": "main",
         "name": "Main Agent",
         "default": true,
-        "model": "anthropic/claude-opus-4-5"
+        "model": "anthropic/claude-opus-4-8"
       }
     ]
   }
@@ -94,12 +94,12 @@ OpenClaw에서 여러 에이전트를 정의하고, 각각 다른 모델과 설�
       {
         "id": "architect",
         "name": "시스템 아키텍트",
-        "model": "anthropic/claude-opus-4-5"
+        "model": "anthropic/claude-opus-4-8"
       },
       {
         "id": "reviewer",
         "name": "코드 리뷰어",
-        "model": "anthropic/claude-sonnet-4-5"
+        "model": "anthropic/claude-sonnet-4-6"
       },
       {
         "id": "helper",

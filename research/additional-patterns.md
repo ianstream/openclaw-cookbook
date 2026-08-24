@@ -552,7 +552,7 @@ openclaw cron add \
   "channels": {
     "modelByChannel": {
       "discord": {
-        "123456789012345678": "anthropic/claude-opus-4-6"
+        "123456789012345678": "anthropic/claude-opus-4-8"
       },
       "telegram": {
         "-1001234567890": "openai/gpt-4.1-mini",
@@ -675,7 +675,7 @@ openclaw cron add \
   "agents": {
     "defaults": {
       "model": {
-        "primary": "anthropic/claude-opus-4-6",
+        "primary": "anthropic/claude-opus-4-8",
         "fallbacks": [
           "openai/gpt-5.4",
           "openai/gpt-4.1-mini"
@@ -826,8 +826,8 @@ openclaw cron add \
 ### 템플릿 변수
 | 변수 | 설명 | 예시 |
 |------|------|------|
-| `{model}` | 짧은 모델명 | `claude-opus-4-6` |
-| `{modelFull}` | 전체 모델 ID | `anthropic/claude-opus-4-6` |
+| `{model}` | 짧은 모델명 | `claude-opus-4-8` |
+| `{modelFull}` | 전체 모델 ID | `anthropic/claude-opus-4-8` |
 | `{provider}` | 프로바이더명 | `anthropic` |
 | `{thinkingLevel}` | 현재 사고 레벨 | `high`, `low`, `off` |
 | `{identity.name}` | 에이전트 이름 | `베일리` |

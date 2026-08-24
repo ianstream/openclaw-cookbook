@@ -41,12 +41,12 @@
       {
         "id": "code",
         "name": "Code Agent",
-        "model": "anthropic/claude-opus-4-5"
+        "model": "anthropic/claude-opus-4-8"
       },
       {
         "id": "analyst",
         "name": "Analyst Agent",
-        "model": "anthropic/claude-sonnet-4-5"
+        "model": "anthropic/claude-sonnet-4-6"
       },
       {
         "id": "lite",
@@ -57,7 +57,7 @@
         "id": "main",
         "name": "Main Agent",
         "default": true,
-        "model": "anthropic/claude-opus-4-5"
+        "model": "anthropic/claude-opus-4-8"
       }
     ]
   },
